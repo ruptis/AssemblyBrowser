@@ -2,9 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowser", "AssemblyBrowser\AssemblyBrowser.csproj", "{1E2C5BA3-B406-42E7-A25C-416FEB7B074E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowser.Core", "AssemblyBrowser.Core\AssemblyBrowser.Core.csproj", "{ED8B7323-F14F-46EC-932F-39EC9A3BBEA9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowserLib", "AssemblyBrowserLib\AssemblyBrowserLib.csproj", "{ED8B7323-F14F-46EC-932F-39EC9A3BBEA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowser.Tests", "AssemblyBrowser.Tests\AssemblyBrowser.Tests.csproj", "{41097F43-D590-426D-8EC4-45114247824D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssemblyBrowserLib.Tests", "AssemblyBrowserLib.Tests\AssemblyBrowserLib.Tests.csproj", "{41097F43-D590-426D-8EC4-45114247824D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssemblyBrowser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainViewModel}">
+    <StackPanel Background="Beige">
+        <Border Padding="5" Background="Bisque" BorderBrush="Black">
+            <DockPanel>
+                <TextBlock Text="fwdw" />
+                <Button
+                    Content="Open"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Width="75" />
+            </DockPanel>
+        </Border>
 
-    </Grid>
+        <TreeView
+            Background="Transparent"
+            BorderBrush="Transparent"
+            FontSize="14"
+            ItemsSource="{Binding TreeItems}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Name="TreeView" />
+    </StackPanel>
 </Window>
