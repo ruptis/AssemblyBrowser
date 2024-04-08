@@ -3,7 +3,9 @@
 public record TypeInfo(
     string Name,
     string AccessModifier,
-    string BaseType,
+    IReadOnlyList<string> Modifiers,
+    string TypeKind,
+    string? BaseType,
     IReadOnlyList<string> ImplementedInterfaces,
     IReadOnlyList<TypeInfo> NestedTypes,
     IReadOnlyList<MemberInfo> Members,

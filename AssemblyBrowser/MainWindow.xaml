@@ -3,28 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AssemblyBrowser"
+        xmlns:viewModel="clr-namespace:AssemblyBrowser.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance local:MainViewModel}">
-    <StackPanel Background="Beige">
-        <Border Padding="5" Background="Bisque" BorderBrush="Black">
-            <DockPanel>
-                <TextBlock Text="fwdw" />
-                <Button
-                    Content="Open"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Top"
-                    Width="75" />
-            </DockPanel>
-        </Border>
+        Title="MainWindow" Height="450" Width="800" d:DataContext="{d:DesignInstance viewModel:MainViewModel}">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <StackPanel Background="Beige">
+            <Border Padding="5" Background="Bisque" BorderBrush="Black">
+                <DockPanel>
+                    <TextBlock Text="{Binding FileName}"/>
+                    <Button
+                        Content="Open"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top"
+                        Width="75"
+                        Command="{Binding OpenCommand}" />
+                </DockPanel>
+            </Border>
 
-        <TreeView
-            Background="Transparent"
-            BorderBrush="Transparent"
-            FontSize="14"
-            ItemsSource="{Binding TreeItems}"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Name="TreeView" />
-    </StackPanel>
+            <TreeView
+                DataContext="{Binding AssemblyTreeViewModel}"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                FontSize="14"
+                ItemsSource="{Binding TreeItems}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+        </StackPanel>
+    </ScrollViewer>
 </Window>

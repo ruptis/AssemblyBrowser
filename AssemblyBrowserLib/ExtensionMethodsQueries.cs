@@ -7,7 +7,7 @@ internal static class ExtensionMethodsQueries
     public static IEnumerable<IGrouping<string?, IGrouping<Type, MethodInfo>>> GetExtensionMethods(this IEnumerable<Type> typesGroups)
     {
         return typesGroups
-            .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic)
+            .SelectMany(type => type.GetMethods(BindingFlags.Static | BindingFlags.Public)
                 .Where(method => method.IsDefined(typeof(ExtensionAttribute), false))
                 .GroupBy(method => method.GetParameters().First().ParameterType))
             .GroupBy(group => group.Key.Namespace);

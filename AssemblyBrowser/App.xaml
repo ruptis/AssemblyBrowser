@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:AssemblyBrowser"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TreeViewItem" x:Key="NamespaceInfoStyle">
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="TreeViewItem" x:Key="TypeInfoStyle">
+            <Setter Property="FontWeight" Value="Normal"/>
+        </Style>
     </Application.Resources>
 </Application>
